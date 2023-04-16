@@ -1,3 +1,4 @@
+\newtheorem*{PR}{Proposition}
 \begin{PR}
     $\bigcap_{t\in\mathbb{R}}C_{t}=\{\varnothing\}$
 \end{PR}
