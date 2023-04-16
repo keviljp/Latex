@@ -1,0 +1,14 @@
+\begin{PR}
+    $\bigcap_{t\in\mathbb{R}}C_{t}=\{\varnothing\}$
+\end{PR}
+\begin{proof}$\phantom{\sum}$ \newline
+    ($\subseteq$) Let $C_0, C_4\in C_t$. Then $C_{0}=\left\{ (x,y)\in\mathbb{R}^{2}:(x)^{2}+y^{2}=1\right\}$ and \\ $C_{4}=\left\{ (x,y)\in\mathbb{R}^{2}:(x-4)^{2}+y^{2}=1\right\}$. Because there exist no $(x,y)\in C_0\bigcap C_4$, $\bigcap_{t\in\mathbb{R}}C_{t}\subseteq\{\varnothing\}$.\\
+    ($\supseteq$) The nothing set is a subset of all sets thus $(x,y)\in C_0\bigcap C_4$, $\bigcap_{t\in\mathbb{R}}C_{t}\supseteq\{\varnothing\}$
+\end{proof}
+
+\begin{PR}
+    $\bigcup_{t\in\mathbb{R}}C_{t}=\{(x,y):x\in\mathbb{R}, -1\leq y \leq 1\}$
+\end{PR}
+\begin{proof}
+    
+\end{proof}
