@@ -1,0 +1,50 @@
+%-------------------Problem 2---------------------------
+\noindent \textbf{Problem 2: } Let $S$ be any \textbf{finite} set and suppose that $x\notin S$.
+Define $K=S\cup\left\{ x\right\} $. 
+\renewcommand{\labelenumi}{\alph{enumi})}
+\begin{enumerate}
+\item Prove that:$\mathscr{P}\left(K\right)$ is the \textbf{disjoint }union
+of $\mathscr{P}\left(S\right)$ and 
+\[
+X=\left\{ T\subseteq K:x\in T\right\} .
+\]
+(That is, prove that (A2:) $\mathscr{P}\left(K\right)=\mathscr{P}\left(S\right)\cup X$
+and that (A1:) $\mathscr{P}\left(S\right)\cap X=\emptyset$.)
+
+\item Prove that every element of $X$ is the union of a subset of $S$
+with $\left\{ x\right\} $, and that if you take different subsets
+of $S$you get different elements of $X$. Argue that, therefore,
+$X$ has the same number of elements as $\mathscr{P}\left(S\right)$. 
+
+\item Argue that parts (a) and (b) allow you to conclude that if $S$ is
+a finite set, then $\mathscr{P}\left(K\right)$ has twice as many
+elements as $\mathscr{P}\left(S\right)$. 
+
+\item Use part (c) to determine the number of elements of the power set
+of $S$. Carefully justify your assertion. 
+\end{enumerate}
+
+\begin{proof} $\phantom{\sum}$ \newline
+(A1) Suppose not, let $M\in\mathscr{P}\left(S\right)\cap X$. Then $M\subseteq S$ and $M\subseteq K$ with $x\in M$. This implies that $M\subseteq S\cap\{x\}$, a contradiction.
+\end{proof}
+\begin{proof} $\phantom{\sum}$ \newline
+(A2) ($\subseteq$) Let $A\in\mathscr{P}\left(K\right)$. Then $A\subseteq K$, so $A\subseteq S\cup X$. If $x\in A$, then $A\in X$, and if $x\notin A$, then $A\subseteq S$ ie. $A\in\mathscr{P}\left(S\right)$. Putting it all together, $A\in X$ or $A\in\mathscr{P}\left(S\right)$ thus $\mathscr{P}\left(K\right)\subseteq\mathscr{P}\left(S\right)\cup X$
+($\supseteq$) Let $H\in\mathscr{P}\left(S\right)\cup X$. Then $H\in X$ or $H\in\mathscr{P}\left(S\right)$. If $H\in X$, $H\subseteq K$ and thus $H\in\mathscr{P}\left(K\right)$. Else $H\in\mathscr{P}\left(S\right)\cup X$, meaning $H\subseteq S$ so $H\subseteq K$ and thus $H\in\mathscr{P}\left(K\right)$ either way. 
+\end{proof}
+
+\begin{proof}$\phantom{\sum}$ \newline
+B) Let $n\in\mathbb{N}$ be the number of elements in $\mathscr{P}\left(S\right)$ and $\ell\in\mathbb{N}$ be the number of elements in X. For every $N\in\mathscr{P}\left(S\right)$, $N\cup \{x\}\in X$ so $n\leq \ell$. But take some $A\in X$, because $A\subseteq K$ where $x\in A$, either $A=\{x\}$ or $A\subseteq S\cup\{x\}$. Either way, $A=N\cup \{x\}$ and thus $\ell\leq n$ taken together, $\ell=n$
+\end{proof}
+
+\begin{proof}$\phantom{\sum}$ \newline
+C) Let $r$ be the number of elements in $\mathscr{P}\left(K\right)$. Because S is a finite set, $\mathscr{P}\left(S\right)$ is a finite set, thus so is $X$ because $\mathscr{P}\left(S\right)$ and $X$ are the same size from (B). Let $A\in\mathscr{P}\left(K\right)$. Then $A\in\mathscr{P}\left(S\right)$ or $A\in X$, but not both from (A). Because of the strict or, $A\in\mathscr{P}\left(K\right)$ is made up of two sets of equal size, ie: $r=2n$
+\end{proof}
+\begin{PR}
+The number of elements in $\mathscr{P}\left(S\right)$ is $2^n$ if $n\in\mathbb{N}$ is the number of elements in S.
+\end{PR}
+\begin{proof}$\phantom{\sum}$ \newline
+C) Take some arbitrary set E containing one arbitrary element $x$. Then $\mathscr{P}\left(E\right)=\{\{x\},\varnothing\}$. Assume for some a set of element number $n\in\mathbb{N}$, the number of elements in the power set is given by $2^n$. Now take a set A with $n+1$ elements in it such that $A=\{A_1,\ldots,A_n,A_{n+1}\}$. See that $A=B\cup\{A_{n+1}\}$ where $B={A_1,\ldots,A_n}$ is an n element set. Every subset of A is either a subset of B or a subset of B with an $\{A_{n+1}\}$ element tacked on. Because this is the case, and the two sets are in fact the same size as so elegantly proved in (B), if $c$ is the number of elements in $\mathscr{P}\left(K\right)$ then $c=2\cdot2^n=2^{n+1}$ as required and shown in (C). Henceforth, because S is a set of element number n, the number of elements in $\mathscr{P}\left(S\right)$ is $2^n$.
+\end{proof}
+
+
+
